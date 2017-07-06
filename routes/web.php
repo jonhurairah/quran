@@ -11,6 +11,8 @@
 |
 */
 
+Route::get('/{sura}/{aya_start}/{aya_end?}', 'QuranController@index');
+
 Route::get('/', function () {
     return view('welcome');
 });
