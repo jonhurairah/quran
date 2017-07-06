@@ -59,6 +59,15 @@
     <div class="flex-center position-ref full-height">
         <div class="content">
             <div class="title m-b-md">Quran</div>
+            <p
+                style="font-weight: 300;"
+            >
+                Tambahkan URI {nomor-surah}/{nomor-ayat}
+                , contoh: 
+                <a href="{{ url('/1/1') }}">
+                    {{ url('/1/1') }}
+                </a>
+            </p>
             <!--
             <div class="links">
                 <a href="https://laravel.com/docs">Documentation</a>
