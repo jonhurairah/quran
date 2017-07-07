@@ -8,7 +8,11 @@ use App\Aya;
 
 class QuranController extends Controller
 {
-    public function index(Sura $sura, $aya_start, $aya_end = false) {
+    public function index(Sura $sura, $aya_start = false, $aya_end = false) {
+        if (!$aya_end and !$aya_start) {
+            $aya_start = 1;
+            $aya_end = $sura->ayas->count();
+        }
         if ($aya_end) {
             $ayas = $sura->ayas()->where([
                 ['aya_id', '>=', $aya_start],

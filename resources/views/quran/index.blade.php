@@ -10,12 +10,12 @@
         }
         .aya-number {
             position: relative;
-            top: -24px;
+            top: -25px;
             display: inline-block;
             width: 48px;
             height: 48px;
             font-size: 16px;
-            margin-right: 16px;
+            margin-right: 24px;
         }
         .aya-number img {
             width: 48px;
@@ -24,8 +24,10 @@
         }
         .aya-number .number {
             position: relative;
-            top: 13px;
+            top: 16px;
             width: 100%;
+            font-size: 12px;
+            font-weight: bold;
         }
     </style>
 @endsection

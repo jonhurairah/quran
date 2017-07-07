@@ -12,7 +12,7 @@
         class="aya-number"
     >
         {{ Html::image('/img/aya-number-frame.png') }}
-        <div class="number text-center">{{ $aya->aya_id }}</div>
+        <div class="number text-center">{{ ar($aya->aya_id) }}</div>
     </div>
 </div>
 <hr>

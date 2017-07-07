@@ -1,5 +1,18 @@
 <?php
 
+if (!function_exists('ar')) {
+      function ar($number) {
+            $numbers = [
+                  0, 1, 2, 3, 4, 5, 6, 7, 8, 9,
+            ];
+            $ars = [
+                  '٠', '١', '٢', '٣', '٤', '٥', '٦', '٧', '٨', '٩',
+            ];
+            $stringNumber = strval($number);
+            return str_replace($numbers, $ars, $stringNumber);
+      }
+}
+
 if (!function_exists('clean')) {
     function clean($text) {
         $search = [
