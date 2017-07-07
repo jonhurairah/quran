@@ -32,7 +32,7 @@
         }
 
         .title {
-            font-size: 84px;
+            font-size: 72px;
         }
 
         .links > a {
@@ -48,6 +48,10 @@
         .m-b-md {
             margin-bottom: 30px;
         }
+
+        p.lead {
+            padding: 8px;
+        }
     </style>
 @endsection
 
@@ -56,53 +60,50 @@
         <div class="content">
             <div class="title m-b-md text-center">
                 Quran
-                &#8226;
-                <span
-                    dir="rtl"
-                    lang="ar"
-                    style="
-                        font-family: qalammajeed;
-                    "
-                >
-                    القرآن
+                <span class="hidden-xs">
+                    &#8226;
+                    <span
+                        dir="rtl"
+                        lang="ar"
+                        style="
+                            font-family: qalammajeed;
+                        "
+                    >
+                        القرآن
+                    </span>
                 </span>
             </div>
             <p class="lead">
                 <b>Akses Pintas &#8226;</b>
                 Tambahkan Format URI
                 <br>
-                <b>{nomor-surah}/{nomor-ayat-dari}/{nomor-ayat-hingga}</b>
+                <b>
+                    <span class="hidden-xs">
+                        {nomor-surah}/{nomor-ayat-dari}/{nomor-ayat-hingga}
+                    </span>
+                    <span class="visible-xs">
+                        {#surah}/{dari}/{hingga}
+                    </span>
+                </b>
                 <ul>
                     Contoh: 
                     <li>
-                        Surat Al-Fatihah, 
                         <a href="{{ url('/1') }}">
-                            {{ url('/1') }}
+                            Surat Al-Fatihah
                         </a>
                     </li>
                     <li>
-                        Surat Al-Baqarah ayat no.1 <i><u>saja</u></i>, 
                         <a href="{{ url('/2/1') }}">
-                            {{ url('/2/1') }}
+                            Surat Al-Baqarah ayat pertama
                         </a>
                     </li>
                     <li>
-                        Surat Ali Imran ayat <i><u>172-173</u></i>
                         <a href="{{ url('/3/172/173') }}">
-                            {{ url('/2/1') }}
+                            Surat Ali Imran ayat 172-173
                         </a>
                     </li>
                 </ul>
             </p>
-            <!--
-            <div class="links">
-                <a href="https://laravel.com/docs">Documentation</a>
-                <a href="https://laracasts.com">Laracasts</a>
-                <a href="https://laravel-news.com">News</a>
-                <a href="https://forge.laravel.com">Forge</a>
-                <a href="https://github.com/laravel/laravel">GitHub</a>
-            </div>
-            -->
         </div>
     </div>
 @endsection
