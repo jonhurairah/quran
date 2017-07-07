@@ -7,4 +7,5 @@
 
 @section('script')
     {{ Html::script('/js/jquery-1.12.4.js') }}
+    {{ Html::script('bootstrap/3.3.7/dist/js/bootstrap.js') }}
 @endsection
