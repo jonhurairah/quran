@@ -8,6 +8,25 @@
             margin: 32px;
             padding: 32px;
         }
+        .aya-number {
+            position: relative;
+            top: -24px;
+            display: inline-block;
+            width: 48px;
+            height: 48px;
+            font-size: 16px;
+            margin-right: 16px;
+        }
+        .aya-number img {
+            width: 48px;
+            position: absolute;
+            top: 0px;
+        }
+        .aya-number .number {
+            position: relative;
+            top: 13px;
+            width: 100%;
+        }
     </style>
 @endsection
 

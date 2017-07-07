@@ -37,3 +37,12 @@
     }
 @endforeach
 </style>
+
+<style>
+    @font-face {
+        font-family: 'qalammajeed';
+        src: url({{ asset(
+            '/font/qalammajeed.ttf'
+        ) }});
+    }
+</style>
