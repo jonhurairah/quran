@@ -1,18 +1,18 @@
-@extends('template.base')
+@extends('template.bootstrap')
 
 @section('style')
+    @parent
     <style>
         html, body {
             background-color: #fff;
             color: #636b6f;
             font-family: 'Raleway', sans-serif;
-            font-weight: 100;
-            height: 100vh;
+            font-weight: 300;
             margin: 0;
         }
 
         .full-height {
-            height: 100vh;
+            height: 80vh;
         }
 
         .flex-center {
@@ -29,10 +29,6 @@
             position: absolute;
             right: 10px;
             top: 18px;
-        }
-
-        .content {
-            text-align: center;
         }
 
         .title {
@@ -58,15 +54,45 @@
 @section('content')
     <div class="flex-center position-ref full-height">
         <div class="content">
-            <div class="title m-b-md">Quran</div>
-            <p
-                style="font-weight: 300;"
-            >
-                Tambahkan URI {nomor-surah}/{nomor-ayat}
-                , contoh: 
-                <a href="{{ url('/1/1') }}">
-                    {{ url('/1/1') }}
-                </a>
+            <div class="title m-b-md text-center">
+                Quran
+                &#8226;
+                <span
+                    dir="rtl"
+                    lang="ar"
+                    style="
+                        font-family: qalammajeed;
+                    "
+                >
+                    القرآن
+                </span>
+            </div>
+            <p class="lead">
+                <b>Akses Pintas &#8226;</b>
+                Tambahkan Format URI
+                <br>
+                <b>{nomor-surah}/{nomor-ayat-dari}/{nomor-ayat-hingga}</b>
+                <ul>
+                    Contoh: 
+                    <li>
+                        Surat Al-Fatihah, 
+                        <a href="{{ url('/1') }}">
+                            {{ url('/1') }}
+                        </a>
+                    </li>
+                    <li>
+                        Surat Al-Baqarah ayat no.1 <i><u>saja</u></i>, 
+                        <a href="{{ url('/2/1') }}">
+                            {{ url('/2/1') }}
+                        </a>
+                    </li>
+                    <li>
+                        Surat Ali Imran ayat <i><u>172-173</u></i>
+                        <a href="{{ url('/3/172/173') }}">
+                            {{ url('/2/1') }}
+                        </a>
+                    </li>
+                </ul>
             </p>
             <!--
             <div class="links">
