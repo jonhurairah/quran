@@ -34,20 +34,26 @@
                             'class' => 'form-control',
                         ]
                     ) }}
+                </div>
+                <div class="form-group">
                     {{ Form::select('aya_start', [], null, [
                         'class' => 'form-control',
                     ]) }}
+                </div>
+                <div class="form-group">
                     {{ Form::select('aya_end', [], null, [
                         'class' => 'form-control',
                     ]) }}
                 </div>
-                <a
-                    href="javascript:"
-                    id="form-navigator"
-                    class="btn btn-default"
-                >
-                    <i class="fa fa-refresh"></i>
-                </a>
+                <div class="form-group">
+                    <a
+                        href="javascript:"
+                        id="form-navigator"
+                        class="btn btn-default btn-block"
+                    >
+                        <i class="fa fa-refresh"></i>
+                    </a>
+                </div>
             {{ Form::close() }}
         </div>
     </div>
