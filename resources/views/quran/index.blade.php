@@ -7,3 +7,13 @@
         </div>
     @endforeach
 @endsection
+
+@section('script')
+    @parent
+    <script>
+        $(function () {
+            @include('quran.script')
+        });
+    </script>
+@endsection
+

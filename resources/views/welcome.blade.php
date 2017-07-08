@@ -74,7 +74,7 @@
                 </span>
             </div>
             <p class="lead">
-                <b>Akses Pintas &#8226;</b>
+                <b>Akses Pintas &bull;</b>
                 Tambahkan Format URI
                 <br>
                 <b>

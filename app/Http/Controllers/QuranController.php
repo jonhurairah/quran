@@ -23,7 +23,9 @@ class QuranController extends Controller
                 ['aya_id', '=', $aya_start],
             ])->get();
         }
+        $suras = Sura::all();
         return view('quran.index', [
+            'suras' => $suras,
             'ayas' => $ayas,
         ]);
     }

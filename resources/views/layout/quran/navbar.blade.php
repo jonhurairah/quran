@@ -21,16 +21,34 @@
             class="collapse navbar-collapse"
             id="bs-example-navbar-collapse-1"
         >
-            <form class="navbar-form navbar-right">
+            {{ Form::open([
+                'id' => 'navigator',
+                'class' => 'navbar-form navbar-right',
+            ]) }}
+            <form id="navigator" class="navbar-form navbar-right">
                 <div class="form-group">
-                    <input
-                        type="text"
-                        class="form-control"
-                        placeholder="Search"
-                    >
+                    {{ Form::select(
+                        'sura', $suras->pluck('title', 'id')
+                        , $ayas->first()->sura_id
+                        , [
+                            'class' => 'form-control',
+                        ]
+                    ) }}
+                    {{ Form::select('aya_start', [], null, [
+                        'class' => 'form-control',
+                    ]) }}
+                    {{ Form::select('aya_end', [], null, [
+                        'class' => 'form-control',
+                    ]) }}
                 </div>
-                <button type="submit" class="btn btn-default">Submit</button>
-            </form>
+                <a
+                    href="javascript:"
+                    id="form-navigator"
+                    class="btn btn-default"
+                >
+                    <i class="fa fa-refresh"></i>
+                </a>
+            {{ Form::close() }}
         </div>
     </div>
 </nav>
